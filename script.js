@@ -14,11 +14,11 @@ function getComputerChoice() {
 function getHumanChoice() {
     let sign = window.prompt("rock, paper or scissors");
 
-    if (sign === "rock") {
+    if (sign.toLowerCase() === "rock") {
         return "rock";
-    } else if (sign === "paper") {
+    } else if (sign.toLowerCase() === "paper") {
         return "paper";
-    } else if (sign === "scissors") {
+    } else if (sign.toLowerCase() === "scissors") {
         return "scissors";
     } else {
         return "Not a valid input";
@@ -31,29 +31,29 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 
-    if (humanChoice.toLowerCase() === "rock" && computerChoice === "rock") {
+    if (humanChoice === "rock" && computerChoice === "rock") {
         console.log("It's a draw");
-    } else if (humanChoice.toLowerCase() === "rock" && computerChoice === "paper") {
+    } else if (humanChoice === "rock" && computerChoice === "paper") {
         computerScore++; console.log("You lose! Paper beats Rock");
-    } else if (humanChoice.toLowerCase() === "rock" && computerChoice === "scissors") {
+    } else if (humanChoice === "rock" && computerChoice === "scissors") {
         humanScore++; console.log("You won! Rock beats Scissors");
 
     } else if (humanChoice === "paper" && computerChoice === "paper") {
         console.log("It's a draw");
-    } else if (humanChoice.toLowerCase() === "paper" && computerChoice === "scissors") {
+    } else if (humanChoice === "paper" && computerChoice === "scissors") {
         computerScore++; console.log("You lose! Scissors beats Paper");
-    } else if (humanChoice.toLowerCase() === "paper" && computerChoice === "rock") {
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++; console.log("You won! Paper beats rock");
 
-    } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "scissors") {
+    } else if (humanChoice === "scissors" && computerChoice === "scissors") {
         console.log("It's a draw");
-    } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "rock") {
+    } else if (humanChoice === "scissors" && computerChoice === "rock") {
         computerScore++; console.log("You lose! Rock beats Scissors");
-    } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "paper") {
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++; console.log("You won! Scissors beats Paper");
 
     } else {
-        return "Not a valid input";
+        console.log("Not a valid input");
     }
 }
 
