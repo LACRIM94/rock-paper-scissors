@@ -9,7 +9,7 @@ function getComputerChoice() {
     } 
 }
 
-//console.log(getComputerChoice());
+
 
 function getHumanChoice() {
     let sign = window.prompt("rock, paper or scissors");
@@ -24,7 +24,9 @@ function getHumanChoice() {
         return "Not a valid input";
     }
 
-} //console.log(getHumanChoice());
+} 
+
+function playGame() {
 
 let humanScore = 0;
 let computerScore = 0;
@@ -61,5 +63,16 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection); 
-console.log(humanScore);
-console.log(computerScore);
+playRound(getHumanChoice(), getComputerChoice()); 
+playRound(getHumanChoice(), getComputerChoice()); 
+playRound(getHumanChoice(), getComputerChoice()); 
+playRound(getHumanChoice(), getComputerChoice()); 
+
+   if (humanScore > computerScore) {
+    console.log("You won! Score: " + humanScore + "-" + computerScore);
+   } else {
+    console.log("You lost. Score: " + humanScore + "-" + computerScore);
+   }
+}
+
+playGame();
