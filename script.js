@@ -20,14 +20,15 @@ let computerScore = 0;
     const computerSelection = getComputerChoice();
         
         if (computerSelection === "rock") {
-        console.log("It's a draw");
+        console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
         return
     } else if (computerSelection === "paper") {
-        console.log("You lose. Paper beats Rock");
-        return computerScore++;
+        computerScore++;
+        console.log("You lose, paper beats rock. Score: " + humanScore + "-" + computerScore);
+        
     } else if (computerSelection === "scissors") {
-        console.log("You win! Rock beats Scissors");
-        return humanScore++; 
+        humanScore++;
+        console.log("You win! Rock beats scissors. Score: " + humanScore + "-" + computerScore);
     }
     })
 
@@ -36,15 +37,13 @@ let computerScore = 0;
     const computerSelection = getComputerChoice();
         
         if (computerSelection === "paper") {
-        console.log("It's a draw");
-        return
+        console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "scissors") {
-        console.log("You lose. Scissors beats Paper");
-        return computerScore++;
+        computerScore++;
+        console.log("You lose, scissors beats paper. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "rock") {
-        console.log("You win! Paper beats rock");
-        return humanScore++; 
-    }
+        humanScore++;
+        console.log("You win! Paper beats rock. Score: " + humanScore + "-" + computerScore);    }
     })
 
  const scissorsBtn = document.querySelector("#scissorsButton");
@@ -52,14 +51,14 @@ let computerScore = 0;
         const computerSelection = getComputerChoice();
 
         if (computerSelection === "scissors") {
-        console.log("It's a draw");
+        console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
         return
     } else if (computerSelection === "rock") {
-        console.log("You lose. Rock beats Scissors");
-        return computerScore++;
+        computerScore++;
+        console.log("You lose, rock beats scissors. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "paper") {
-        console.log("You win! Scissors beats Paper");
-        return computerScore++;
+        humanScore++;
+        console.log("You win! Scissors beats paper. Score: " + humanScore + "-" + computerScore);
     }
     })
 
