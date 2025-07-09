@@ -20,15 +20,20 @@ let computerScore = 0;
     const computerSelection = getComputerChoice();
         
         if (computerSelection === "rock") {
-        console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
-        return
+        let rockDraw = document.querySelector("div");
+        rockDraw.textContent = "It's a draw. Score: " + humanScore + "-" + computerScore;
+        //console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "paper") {
         computerScore++;
-        console.log("You lose, paper beats rock. Score: " + humanScore + "-" + computerScore);
+        let rockLose = document.querySelector("div");
+        rockLose.textContent = "You lose, paper beats rock. Score: " + humanScore + "-" + computerScore;
+        //console.log("You lose, paper beats rock. Score: " + humanScore + "-" + computerScore);
         
     } else if (computerSelection === "scissors") {
         humanScore++;
-        console.log("You win! Rock beats scissors. Score: " + humanScore + "-" + computerScore);
+        let rockWin = document.querySelector("div");
+        rockWin.textContent = "You win! Rock beats scissors. Score: " + humanScore + "-" + computerScore;
+        //console.log("You win! Rock beats scissors. Score: " + humanScore + "-" + computerScore);
     }
     })
 
@@ -37,13 +42,20 @@ let computerScore = 0;
     const computerSelection = getComputerChoice();
         
         if (computerSelection === "paper") {
-        console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
+        let paperDraw = document.querySelector("div");
+        paperDraw.textContent = "It's a draw. Score: " + humanScore + "-" + computerScore;
+        //console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "scissors") {
         computerScore++;
-        console.log("You lose, scissors beats paper. Score: " + humanScore + "-" + computerScore);
+        let paperlose = document.querySelector("div");
+        paperlose.textContent = "You lose, scissors beats paper. Score: " + humanScore + "-" + computerScore;
+        //console.log("You lose, scissors beats paper. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "rock") {
         humanScore++;
-        console.log("You win! Paper beats rock. Score: " + humanScore + "-" + computerScore);    }
+        let paperWin = document.querySelector("div");
+        paperWin.textContent = "You win! Paper beats rock. Score: " + humanScore + "-" + computerScore;
+        //console.log("You win! Paper beats rock. Score: " + humanScore + "-" + computerScore);    
+        }
     })
 
  const scissorsBtn = document.querySelector("#scissorsButton");
@@ -51,14 +63,19 @@ let computerScore = 0;
         const computerSelection = getComputerChoice();
 
         if (computerSelection === "scissors") {
-        console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
-        return
+        let scissorsDraw = document.querySelector("div");
+        scissorsDraw.textContent = "It's a draw. Score: " + humanScore + "-" + computerScore; 
+        //console.log("It's a draw. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "rock") {
         computerScore++;
-        console.log("You lose, rock beats scissors. Score: " + humanScore + "-" + computerScore);
+        let scissorsLose = document.querySelector("div");
+        scissorsLose.textContent = "You lose, rock beats scissors. Score: " + humanScore + "-" + computerScore;
+        //console.log("You lose, rock beats scissors. Score: " + humanScore + "-" + computerScore);
     } else if (computerSelection === "paper") {
         humanScore++;
-        console.log("You win! Scissors beats paper. Score: " + humanScore + "-" + computerScore);
+        let scissorsWin = document.querySelector("div");
+        scissorsWin.textContent = "You win! Scissors beats paper. Score: " + humanScore + "-" + computerScore;
+        //console.log("You win! Scissors beats paper. Score: " + humanScore + "-" + computerScore);
     }
     })
 
