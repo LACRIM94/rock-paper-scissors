@@ -65,8 +65,8 @@ let computerScore = 0;
         computerWin.textContent = "You lost. Total score: " + humanScore + "-" + computerScore;
     } 
     else {
-        let paperlose = document.querySelector("div");
-        paperlose.textContent = "You lose, scissors beats paper. Score: " + humanScore + "-" + computerScore;
+        let paperLose = document.querySelector("div");
+        paperLose.textContent = "You lose, scissors beats paper. Score: " + humanScore + "-" + computerScore;
       
     }
         
